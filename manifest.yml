@@ -1,0 +1,20 @@
+modules:
+  jira:issuePanel:
+    - key: f5-dualmodule-s-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: F5-IssuePanel-S
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+
+  function:
+    - key: resolver
+      handler: index.handler
+
+resources:
+  - key: main
+    path: static/hello-world/build
+
+app:
+  id: ari:cloud:ecosystem::app/120d689a-8005-46c6-8c4f-8145809fd9c7
