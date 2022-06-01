@@ -1,6 +1,6 @@
 modules:
   jira:issuePanel:
-    - key: f5-dualmodule-s-hello-world-panel
+    - key: f5-dualmodule-s-hello-world-issue-panel
       resource: main
       resolver:
         function: resolver
@@ -8,8 +8,19 @@ modules:
       title: F5-IssuePanel-S
       icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
 
+  jira:adminPage:
+    - key: f5-dualmodule-s-hello-world-admin-page
+      resource: main
+      resolver:
+        function: adminpageresolver
+      viewportSize: medium
+      title: F5-AdminPage-S
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+
   function:
     - key: resolver
+      handler: index.handler
+    - key: adminpageresolver
       handler: index.handler
 
 resources:
