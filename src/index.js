@@ -4,13 +4,20 @@ const resolver = new Resolver();
 
 resolver.define('getText', (req) => {
   console.log(req);
-
-  return 'Hello, world!';
+  return ('Hello, Issue!');
 });
 export const handler = resolver.getDefinitions();
 
-const adminPageResolver = new Resolver();
-export const handlerAdminPage = adminPageResolver.getDefinitions();
+const resolver2 = new Resolver();
 
-const issuePanelResolver = new Resolver();
-export const handlerIssuePannel = issuePanelResolver.getDefinitions();
+resolver2.define('getText', (req) => {
+  console.log(req);
+  return ('Hello, Admin!');
+});
+export const handler1 = resolver2.getDefinitions();
+
+// const issuePanelResolver = new Resolver();
+// export const handlerIssuePannel = issuePanelResolver.getDefinitions();
+
+// const adminPageResolver = new Resolver();
+// export const handlerAdminPage = adminPageResolver.getDefinitions();

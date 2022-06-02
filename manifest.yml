@@ -21,7 +21,7 @@ modules:
     - key: resolver
       handler: index.handler
     - key: adminpageresolver
-      handler: index.handler
+      handler: index.handler1
 
 resources:
   - key: main
