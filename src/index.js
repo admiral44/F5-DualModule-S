@@ -1,23 +1,20 @@
 import Resolver from '@forge/resolver';
+// import { storage } from '@forge/api';
 
+// Issue Panel handler
 const resolver = new Resolver();
 
 resolver.define('getText', (req) => {
-  console.log(req);
-  return ('Hello, Issue!');
+  console.log("Issue : ", req);
+  return "Issue-Panel";
 });
 export const handler = resolver.getDefinitions();
 
-const resolver2 = new Resolver();
+// Admin Page handler
+const resolver1 = new Resolver();
 
-resolver2.define('getText', (req) => {
-  console.log(req);
-  return ('Hello, Admin!');
+resolver1.define('getText', (req) => {
+  console.log("Admin : ", req);
+  return "Admin-Page";
 });
-export const handler1 = resolver2.getDefinitions();
-
-// const issuePanelResolver = new Resolver();
-// export const handlerIssuePannel = issuePanelResolver.getDefinitions();
-
-// const adminPageResolver = new Resolver();
-// export const handlerAdminPage = adminPageResolver.getDefinitions();
+export const handler1 = resolver1.getDefinitions();

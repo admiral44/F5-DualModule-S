@@ -12,7 +12,7 @@ modules:
     - key: f5-dualmodule-s-hello-world-admin-page
       resource: main
       resolver:
-        function: adminpageresolver
+        function: resolver1
       viewportSize: medium
       title: F5-AdminPage-S
       icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
@@ -20,7 +20,7 @@ modules:
   function:
     - key: resolver
       handler: index.handler
-    - key: adminpageresolver
+    - key: resolver1
       handler: index.handler1
 
 resources:
@@ -29,3 +29,15 @@ resources:
 
 app:
   id: ari:cloud:ecosystem::app/120d689a-8005-46c6-8c4f-8145809fd9c7
+
+permissions:
+  scopes:
+    - storage:app
+    - read:jira-work
+    - read:comment:jira
+    - read:comment.property:jira
+    - read:group:jira
+    - read:project:jira
+    - read:project-role:jira
+    - read:user:jira
+    - read:avatar:jira
